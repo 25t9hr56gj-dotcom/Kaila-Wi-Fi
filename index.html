@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Join Kaila WiFi</title>
+<style>
+body{
+    font-family:Arial,sans-serif;
+    text-align:center;
+    margin-top:80px;
+}
+button{
+    padding:15px 30px;
+    font-size:18px;
+}
+</style>
+</head>
+<body>
+
+<h1>📶 Join Kaila WiFi</h1>
+
+<p>Network: <b>Kaila WiFi</b></p>
+
+<p>Password:</p>
+
+<input id="pw" value="YOUR_PASSWORD_HERE" readonly>
+
+<br><br>
+
+<button onclick="copyPassword()">Copy Password</button>
+
+<script>
+function copyPassword(){
+    var copy=document.getElementById("pw");
+    copy.select();
+    navigator.clipboard.writeText(copy.value);
+    alert("Password copied!");
+}
+</script>
+
+</body>
+</html>
